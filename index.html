@@ -27,38 +27,48 @@
     <body>
 
         <!-- Header -->
-        <header>
+        <header class="mb-5 mt-3 text-center">
 
-            <h1>
-                Calcola il prezzo del tuo biglietto
-            </h1>
+            <div class="container">
+
+                <h1>
+                    Calcola il prezzo del tuo biglietto
+                </h1>
+
+            </div>
 
         </header>
         
         <!-- Main -->
         <main>
 
-            <form>
+            <div class="container">
 
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
+                <form>
 
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
+                    <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Nome e cognome</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
 
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
+                    <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Km da percorrere</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
-                
-              </form>
+                    <label for="age-selector">Fascia d'età</label>
+                    <select class="form-select mb-3" id="age-selector" aria-label="Default select example">
+
+                        <option value="1">Minorenne</option>
+                        <option value="2">Maggiorenne</option>
+                        <option value="3">Over 65</option>
+
+                    </select>
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+                </form>
+            </div>
 
         </main>
         
