@@ -2,64 +2,32 @@
     JS
 */
 
-const userKm = document.querySelector('[name= "km"]');
+const myButton = document.getElementById('click-button')
 
-const userKmConverted = parseInt (userKm)
+myButton.addEventListener('click',
+    function(){
 
-console.log ('userKmconverted', typeof userKmConverted)
+        const distance = parseInt(document.getElementById('kmInput').value);
+        console.log('km', distance, typeof distance)
 
-// --------------------------
+        const age = parseInt(document.getElementById('ageInput').value);
+        console.log('anni', age, typeof age)
 
+        const ticketPrice = (distance * 0.21)
+        console.log('prezzo', ticketPrice, typeof ticketPrice)
 
-const userAge = document.getElementById('ageInput').value;
-console.log (userAge.value)
+        let discount = 0
 
+        if (age == 1){
+            discount = (ticketPrice * 20) / 100;
+        }
+        else if (age == 3){
+            discount = (ticketPrice * 40) / 100;
+        }
+       
+        const finalPrice = ticketPrice - discount
 
-const userAgeConverted = parseInt (userAge)
-
-console.log ('userAgeconverted', typeof userAgeConverted)
-
-// --------------------------
-
-let discount = 0
-
-
-const ticketPrice = (userKmConverted * 0.21) - discount
-
-if (userAgeConverted == 1){
-
-    discount = ((ticketPrice * 20 ) / 100) 
-
-} else if (userAgeConverted == 2){
-    
-    discount = 0
-
-} else {
-
-    discount = ((ticketPrice * 40 ) / 100)
-
-    console.log ((ticketPrice * 40 ) / 100)
-}
-
-console.log('ticket price', ticketPrice)
-
-
-// --------------------------
-
-
-
-const myButton = document.getElementById('click-button');
-
-myButton.addEventListener ('click',
-    function() {
-        document.getElementById('userFinalPrice').innerHTML = ticketPrice + '€'
+        document.getElementById('userFinalPrice').innerHTML = finalPrice +'€'
     }
 )
-
-
-
-
-
-
-
 
